@@ -67,5 +67,18 @@ cucumber_002/
    cd selenium-cucumber-portfolio
    
 mvn clean install
-
 mvn test
+
+### Screenshots
+
+**Login Page**  
+![Login Page](screenshots/login-page.png)
+
+**Inventory Page after Login**  
+![Inventory Page after Login](screenshots/inventory-after-login.png)
+
+**Cart with 2 Items**  
+![Cart with 2 Items](screenshots/cart-two-items.png)
+
+**Console Output – All Passed**  
+![Test Results](screenshots/console-passed.png)
