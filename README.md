@@ -1,28 +1,29 @@
 # Selenium + Cucumber BDD Automation Portfolio Project
 
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Selenium](https://img.shields.io/badge/Selenium-4-orange)
-![Cucumber](https://img.shields.io/badge/Cucumber-BDD-brightgreen)
-![TestNG](https://img.shields.io/badge/TestNG-7.9-red)
-![Maven](https://img.shields.io/badge/Maven-build-success)
+[![Java 17](https://img.shields.io/badge/Java-17-blue)](https://www.java.com)
+[![Selenium 4](https://img.shields.io/badge/Selenium-4-orange)](https://www.selenium.dev)
+[![Cucumber BDD](https://img.shields.io/badge/Cucumber-BDD-brightgreen)](https://cucumber.io)
+[![TestNG](https://img.shields.io/badge/TestNG-7.9-red)](https://testng.org)
 
-Professional UI test automation framework for the public demo e-commerce site **saucedemo.com**.
+A clean, scalable UI test automation framework for the public demo e-commerce site **saucedemo.com**.
 
 ### Key Features
-- Page Object Model (POM) with reusable `BasePage` utilities
-- Behavior-Driven Development (BDD) using Cucumber (Gherkin scenarios)
+- Page Object Model (POM) with reusable `BasePage` utilities (safe wait, click, type)
+- Behavior-Driven Development (BDD) with Gherkin scenarios
 - Configuration-driven testing (credentials from `config.properties`)
 - Hooks for browser setup/teardown
-- Positive & negative test scenarios (login, invalid login, add to cart)
-- Assertions on URL and UI elements (cart badge count)
-- Clean, maintainable structure ready for scaling
+- Positive, negative, and multi-step scenarios
+- Assertions on URL, UI elements, and cart count
 
 ### Tech Stack
 - Java 17
 - Selenium WebDriver 4
 - Cucumber 7 (BDD)
 - TestNG 7.9 (runner)
-- Maven (build & dependency management)
-- WebDriverManager (auto browser drivers)
+- Maven (build & dependencies)
+- WebDriverManager (auto ChromeDriver)
 
-### Project Structure# selenium-cucumber-portfolio
+### How to Run Locally
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Lugendran/selenium-cucumber-portfolio.git
