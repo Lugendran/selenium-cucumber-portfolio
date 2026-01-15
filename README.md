@@ -1,54 +1,71 @@
 # Selenium + Cucumber BDD Automation Portfolio Project
 
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Selenium](https://img.shields.io/badge/Selenium-4-orange)
-![Cucumber](https://img.shields.io/badge/Cucumber-BDD-brightgreen)
-![TestNG](https://img.shields.io/badge/TestNG-7.9-red)
-![Maven](https://img.shields.io/badge/Maven-build-success)
+![Java](https://img.shields.io/badge/Java-17-blue?style=flat-square&logo=java&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-4-orange?style=flat-square&logo=selenium&logoColor=white)
+![Cucumber](https://img.shields.io/badge/Cucumber-BDD-brightgreen?style=flat-square&logo=cucumber&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-7.9-red?style=flat-square&logo=testng&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-build-success?style=flat-square&logo=apachemaven&logoColor=white)
 
-Professional UI test automation framework for the public demo e-commerce site **saucedemo.com**.
+A clean, scalable, and production-ready **UI test automation framework** built with **Selenium WebDriver**, **Cucumber (BDD)**, **TestNG**, and **Maven**.  
+
+This project demonstrates modern automation practices by automating key flows on the public demo e-commerce site **saucedemo.com**.
 
 ### Key Features
-- Page Object Model (POM) with reusable `BasePage` utilities
-- Behavior-Driven Development (BDD) using Cucumber (Gherkin scenarios)
-- Configuration-driven testing (credentials from `config.properties`)
-- Hooks for browser setup/teardown
-- Positive & negative test scenarios (login, invalid login, add to cart)
-- Assertions on URL and UI elements (cart badge count)
-- Clean, maintainable structure ready for scaling
+- **Page Object Model (POM)** with reusable `BasePage` utilities for safe interactions (waits, clicks, typing)
+- **Behavior-Driven Development (BDD)** using Cucumber Gherkin scenarios (readable by non-technical stakeholders)
+- **Configuration-driven testing** — credentials and base URL from `config.properties` (no hard-coded values)
+- **Hooks** for browser lifecycle management (setup/teardown)
+- **Positive & negative scenarios** — login success/failure, cart addition (single & multiple items)
+- **Assertions** on URL redirection and UI elements (cart badge count)
+- **Reusable components** — `BasePage` methods inherited by all page objects
+- **Clean structure** ready for scaling to large applications
 
 ### Tech Stack
-- Java 17
-- Selenium WebDriver 4
-- Cucumber 7 (BDD)
-- TestNG 7.9 (runner)
-- Maven (build & dependency management)
-- WebDriverManager (auto browser drivers)
+- **Java** 17
+- **Selenium WebDriver** 4.16.1
+- **Cucumber** 7.15.0 (BDD)
+- **TestNG** 7.9.0 (test runner)
+- **Maven** (dependency & build management)
+- **WebDriverManager** (automatic ChromeDriver download)
 
-### Project Structure# selenium-cucumber-portfolio
+### Project Structure
+
+cucumber_002/
+├── src/
+│   ├── main/
+│   │   └── java/com/lugendran/utils/
+│   │       ├── BasePage.java          # Reusable actions (click, type, wait)
+│   │       └── ConfigReader.java      # Reads config.properties
+│   └── test/
+│       ├── java/com/lugendran/
+│       │   ├── hooks/
+│       │   │   └── Hooks.java         # Browser setup & teardown
+│       │   ├── pages/
+│       │   │   ├── LoginPage.java
+│       │   │   └── InventoryPage.java
+│       │   ├── runners/
+│       │   │   └── TestRunner.java    # Cucumber TestNG runner
+│       │   └── stepdefinitions/
+│       │       ├── LoginSteps.java
+│       │       └── InventorySteps.java
+│       └── resources/
+│           ├── features/
+│           │   ├── Login.feature
+│           │   ├── AddToCart.feature
+│           │   ├── CartMultiple.feature
+│           │   └── LoginInvalid.feature
+│           └── config.properties      # base.url, username, password
+├── pom.xml                                # Dependencies & build config
+└── README.md                              # This file
 
 
-#### 2. Add Screenshots (Visual Proof)
 
-1. Run tests again (with pause in `Hooks.java` if needed)
-2. Take 3–4 screenshots:
-   - Login page
-   - Inventory page after login
-   - Cart badge "1" or "2"
-   - Console showing PASSED
-3. Create folder `screenshots` in project root
-4. Add screenshots there
-5. Update README with images:
+### How to Run Locally
+1. **Clone** the repository:
+   ```bash
+   git clone https://github.com/Lugendran/selenium-cucumber-portfolio.git
+   cd selenium-cucumber-portfolio
+   
+mvn clean install
 
-```markdown
-### Screenshots
-
-**Successful Login**  
-![Login Success](screenshots/login-success.png)
-
-**Cart with 2 items**  
-![Cart with 2 items](screenshots/cart-two.png)
-
-**Console Output**  
-![Test Passed](screenshots/console-passed.png)
-
+mvn test
