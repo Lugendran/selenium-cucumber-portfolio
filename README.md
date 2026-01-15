@@ -26,3 +26,29 @@ Professional UI test automation framework for the public demo e-commerce site **
 - WebDriverManager (auto browser drivers)
 
 ### Project Structure# selenium-cucumber-portfolio
+
+
+#### 2. Add Screenshots (Visual Proof)
+
+1. Run tests again (with pause in `Hooks.java` if needed)
+2. Take 3–4 screenshots:
+   - Login page
+   - Inventory page after login
+   - Cart badge "1" or "2"
+   - Console showing PASSED
+3. Create folder `screenshots` in project root
+4. Add screenshots there
+5. Update README with images:
+
+```markdown
+### Screenshots
+
+**Successful Login**  
+![Login Success](screenshots/login-success.png)
+
+**Cart with 2 items**  
+![Cart with 2 items](screenshots/cart-two.png)
+
+**Console Output**  
+![Test Passed](screenshots/console-passed.png)
+
